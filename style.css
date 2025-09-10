@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Manga";
+    src: url("h_hachimaki/hHachimaki.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: "Manga", sans-serif;
+    background: white;
+    color: black;
+}
+
+#intro {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out, visibility 1s;
+    opacity: 0;
+}
+
+#intro.show {
+  opacity: 1;
+}
+
+#intro.fade {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#enterBtn {
+    font-family: "Manga", sans-serif;
+    margin-top: 20px;
+    padding: 0.6em 1.2em;
+    border: none;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    cursor: pointer;
+    background: black;
+    color: white;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+#enterBtn:hover {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: black;
+    background: white;
+}
+
+#enterBtn.show {
+    opacity: 1;
+}
+
+#content {
+    text-align: center;
+    font-family: "Manga", sans-serif;
+    margin-top: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#content.show {
+  display: block;
+  opacity: 1;
+}
+
+#pic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#pic img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 6px solid black;
+    transition: all 0.7s ease;
+}
+
+#pic img:hover  {
+    border: 6px solid black;
+    max-width: 500px;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  #pic img {
+    max-width: 90%;
+  }
+}
