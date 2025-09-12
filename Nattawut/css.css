@@ -200,6 +200,7 @@
         margin-bottom: 1rem;
         color: #6693f5;
         transition: color 0.3s ease;
+        text-align: center;
     }
 
     .experience-card:hover h2 {
